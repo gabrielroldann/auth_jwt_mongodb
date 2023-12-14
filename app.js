@@ -127,7 +127,7 @@ app.post('/auth/login', async(req, res) => {
 
     try {
 
-        const secret = process.env.secret
+        const secret = process.env.SECRET
 
         const token = jwt.sign({
             id: user._id,
@@ -148,7 +148,7 @@ app.delete('/auth/delete', async(req, res) => {
 // conectando ao banco
 const dbUser = process.env.DB_USER
 const dbPassword = process.env.DB_PASS
-mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.yho4oew.mongodb.net/`)
+mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.6fyixnv.mongodb.net/`)
     .then(() => {
         app.listen(3000);
         console.log('Conectou ao Banco!');
